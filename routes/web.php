@@ -8,6 +8,7 @@ use App\Http\Controllers\search;
 use App\Http\Controllers\profilef;
 use App\Http\Controllers\profilel;
 use App\Http\Controllers\home;
+use App\Http\Controllers\mailer;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,3 +50,5 @@ Route::get('/signup', function() {
 Route::get('/submitted', function() {
     return view('submitted');
 });
+
+Route::get('/testingsendmail', [mailer::class,'index']);
